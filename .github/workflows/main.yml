@@ -18,6 +18,14 @@ jobs:
       uses: gradle/gradle-build-action@v2
     - name: Grant execute permission for gradlew
       run: chmod +xrw ./gradlew
+    - name: Run Gradle
+      run: ./gradlew
+    - name: Setup Dev Workspace
+      run: ./gradlew setupDevWorkspace
+    - name: Setup Decompile Workspace
+      run: ./gradlew setupDecompWorkspace
+    - name: Setup Eclipse Workspace
+      run: ./gradlew eclipse
     - name: Build with Gradle
       run: ./gradlew build
     - name: Upload build artifacts
