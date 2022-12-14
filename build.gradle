@@ -213,12 +213,12 @@ dependencies {
     minecraft 'net.minecraftforge:forge:' + minecraft_version + '-' + forge_version
 
     // would ideally use API for this, but that does not work well with fg.deobf in my understanding
-    implementation fg.deobf("slimeknights.mantle:Mantle:${minecraft_version}-${mantle_version}")
+    implementation fg.deobf("curse.maven:Mantle-74924:3631982")
 
     // compile against the JEI API but do not include it at runtime
-    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}:${jei_version}:api")
+    compileOnly fg.deobf("curse.maven:JEI1-238222:4060770")
     // at runtime, use the full JEI jar
-    runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}:${jei_version}")
+    runtimeOnly fg.deobf("curse.maven:JEI2-238222:4060770")
 
     implementation fg.deobf("curse.maven:TheOneProbe-245211:3108607")
 
