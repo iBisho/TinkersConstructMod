@@ -58,12 +58,9 @@ repositories {
         name 'BlameJared Maven'
         url 'https://maven.blamejared.com'
     }
-//    maven {
-//        url "https://www.cursemaven.com"
-//        content {
-//            includeGroup "curse.maven"
-//        }
-//    }
+    maven {
+        url "https://cursemaven.com"
+    }
 }
 
 group = 'slimeknights.tconstruct'
@@ -223,10 +220,10 @@ dependencies {
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}:${jei_version}")
 
-    implementation fg.deobf("mcjty.theoneprobe:TheOneProbe-${minecraft_base_version}:${minecraft_base_version}-${probe_version}")
+    implementation fg.deobf("curse.maven:TheOneProbe-245211:3108607")
 
-    compileOnly fg.deobf("com.blamejared.crafttweaker:CraftTweaker-${minecraft_version}:${crt_version}")
-    compileOnly fg.deobf("blusunrize.immersiveengineering:ImmersiveEngineering:${minecraft_version}-${ie_version}")
+    compileOnly fg.deobf("curse.maven:CraftTweaker-239197:3329668")
+    compileOnly fg.deobf("curse.maven:ImmersiveEngineering-231951:3809596")
     //runtimeOnly fg.deobf("curse.maven:MmmMmmMmmMmm-225738:3279930")
 
     deployerJars 'org.apache.maven.wagon:wagon-ssh:2.2'
